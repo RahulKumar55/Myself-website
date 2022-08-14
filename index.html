@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="author" content="Rahul Kumar" />
+
+    <title>Personal Website</title>
+
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    <div id="myself">
+      <img src="./files/Rahul.jpeg" />
+      <h1>Rahul Kumar</h1>
+      <h3>Software Developer</h3>
+      <a href="./files/Resume Rahul.pdf" download="Resume"><button>Resume</button></a>
+      <a href="#name">
+        <button>Contact Me</button>
+      </a>
+    </div>
+
+    <h2>About Me</h2>
+    <div id="info">
+      <div id="basic">
+        <h3>Basic Information</h3>
+        <h4>NAME: Rahul Kumar</h4>
+        <h4>Student ID: 157197211</h4>
+        <h4>Course: WEB222</h4>
+        <h4>SECTION: NKK</h4>
+        <h4>INSTRUCTOR: Robin Li</h4>
+      </div>
+      <div id="honesty">
+        <h3>Academic Honesty</h3>
+        <p>
+          I declare that my assessment is wholly my own work in accordance with Seneca Academic
+          Policy. No part of this assessment has been copied manually or electronically from any
+          other source (including web sites) except for the information supplied by the WEB222
+          instructors and / or made available in this assessment for my use. I also declare that no
+          part of this assignment has been distributed to other students.
+        </p>
+        <h5>Date: August 13, 2022</h5>
+      </div>
+      <div id="skills">
+        <h3>Skills And Interest</h3>
+        <span>
+          My field is Programming and my strength is my Problem solving techniques. I have basic
+          knowledge of 4 programming languages: C,C++, Javascript and Python. Further I know HTML
+          and CSS for web creation. Finally, I have general knowledge of databases and SQL. My
+          general interest is new technology and this includes everything from phones to cars. In my
+          free time I like to either go on a drive or to play video games.
+        </span>
+      </div>
+    </div>
+
+    <h2>EDUCATION</h2>
+    <div id="edu">
+      <div id="high">
+        <h4>2021</h4>
+        <h4>High School</h4>
+        <h4>DAV School</h4>
+      </div>
+      <div id="dip">
+        <h4>2022-2024(Expected)</h4>
+        <h4>CPA (Advanced Diploma)</h4>
+        <h4>Seneca College</h4>
+      </div>
+    </div>
+
+    <h2>Contact Me</h2>
+    <form id="contact" action="https://httpbin.org/post" method="post">
+      <label for="name">NAME:</label>
+      <input id="name" type="text" required />
+      <label for="email">EMAIL:</label>
+      <input id="email" type="email" required />
+      <label for="phone">PHONE NUMBER(Enter 10 numbers):</label>
+      <input id="phone" type="tel" pattern="[0-9]{10}" />
+      <label for="address">ADDRESS:</label>
+      <input id="address" type="text" required />
+      <label for="city">CITY:</label>
+      <input list="cities" id="city" type="text" required />
+
+      <datalist id="cities">
+        <option value="Toronto"></option>
+        <option value="Vancouver"></option>
+        <option value="Montreal"></option>
+        <option value="Edmonton"></option>
+        <option value="Winnipeg"></option>
+      </datalist>
+
+      <label for="code">POSTAL CODE(A1A-1A1):</label>
+      <input id="code" type="text" pattern="[A-Za-z][0-9][A-Za-z]-[0-9][A-Za-z][0-9]" required />
+      <div id="radio">
+        <label for="ques">QUESTION</label>
+        <input id="ques" name="questype" type="radio" value="question" onclick="subtract()" />
+        <label for="comment">COMMENT:</label>
+        <input id="comment" name="questype" type="radio" value="comment" onclick="subtract()" />
+        <label for="hiring">HIRING:</label>
+        <input id="hiring" name="questype" type="radio" value="hire" onclick="add()" />
+        <div id="pay"></div>
+      </div>
+      <label for="message">Type your message here:</label>
+      <textarea id="message" required></textarea>
+      <input type="submit" />
+    </form>
+  </body>
+</html>
