@@ -8,7 +8,7 @@ function add() {
 
     var lab = document.createElement("label");
     lab.setAttribute("for", "rate");
-    lab.innerHTML = "HOURLY RATE:";
+    lab.innerHTML = "HOURLY RATE (112.56):";
 
     var pay = document.getElementById("pay");
     pay.appendChild(lab);
